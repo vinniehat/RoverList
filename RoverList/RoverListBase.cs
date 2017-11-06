@@ -13,6 +13,11 @@ namespace RoverList
         {
             public object Content;
             public Node Next;
+
+            public Node (object Content)
+            {
+                this.Content = Content;
+            }
         }
 
         public abstract int Count
