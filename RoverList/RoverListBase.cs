@@ -11,12 +11,12 @@ namespace RoverList
 
         public class Node
         {
-            public object Content;
+            public object Data;
             public Node Next;
 
-            public Node (object Content)
+            public Node (object data)
             {
-                this.Content = Content;
+                this.Data = data;
             }
         }
 
@@ -38,13 +38,13 @@ namespace RoverList
         /// <summary>
         /// Add a new Node to the list.
         /// </summary>
-        public abstract void Add(object content);
+        public abstract void Add(object data);
 
         /// <summary>
         /// Add a new Node to the list at the specified position.
         /// </summary>
         /// <param name="Position">One based position of the node to add</param>         
-        public abstract void Add(int Position, object content);
+        public abstract void Add(int Position, object data);
 
 
         /// <summary>

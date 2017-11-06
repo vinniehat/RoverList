@@ -17,12 +17,12 @@ namespace RoverList
 
         public override int Count => throw new NotImplementedException();
 
-        public override void Add(object content)
+        public override void Add(object data)
         {
             throw new NotImplementedException();
         }
 
-        public override void Add(int Position, object content)
+        public override void Add(int Position, object data)
         {
             throw new NotImplementedException();
         }
