@@ -10,12 +10,11 @@ namespace RoverList
     {
         static void Main(string[] args)
         {
+            RoverList<string> list = new RoverList<string>();
+
             // TODO:  Implement the RoverList class
             // TODO:  Create a RoverList and then fill it with 16 words
 
-            // TODO:  Print out the list
-
-            // TODO:  Remove every 3rd word
             // TODO:  Print out the list
 
             // TODO:  Prompt the user to input words, add those words to the list until they enter the word "done"
