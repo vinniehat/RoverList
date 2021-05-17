@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace RoverList
 {
-    public abstract class RoverListBase
+    public abstract class RoverListBase<T>
     {
 
         public class Node
         {
-            public object Data;
+            public T Data { get; set; }
             public Node Next;
 
-            public Node (object data)
+            public Node (T data)
             {
                 this.Data = data;
             }
@@ -36,15 +36,16 @@ namespace RoverList
         protected Node current;
 
         /// <summary>
-        /// Add a new Node to the list.
+        /// Add a new Node to end of the list.
         /// </summary>
-        public abstract void Add(object data);
+        public abstract void Add(T data);
 
         /// <summary>
-        /// Add a new Node to the list at the specified position.
+        /// Inserts a new Node to the list at the specified position, shifting everything from
+        /// position on one to the right.
         /// </summary>
-        /// <param name="Position">One based position of the node to add</param>         
-        public abstract void Add(int Position, object data);
+        /// <param name="Position">Zero-based position of the node to add (Position 0 is the first node, 1 is the second, etc)</param>         
+        public abstract void Add(int Position, T data);
 
 
         /// <summary>
@@ -54,11 +55,11 @@ namespace RoverList
 
 
         /// <summary>
-        /// Returns the Node in the specified position or null if inexistent
+        /// Returns the element T in the specified position or null if does not exist
         /// </summary>
         /// <param name="Position">One based position of the node to retrieve</param>
         /// <returns>The desired node or null if inexistent</returns>
-        public abstract Node ElementAt(int Position);
+        public abstract T ElementAt(int Position);
 
         /// <summary>
         /// Delete a Node in the specified position

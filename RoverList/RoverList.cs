@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RoverList
 {
-    class RoverList : RoverListBase
+    public class RoverList<T> : RoverListBase<T>
     {
         // Add any variables you need here
         
@@ -17,12 +17,12 @@ namespace RoverList
 
         public override int Count => throw new NotImplementedException();
 
-        public override void Add(object data)
+        public override void Add(T data)
         {
             throw new NotImplementedException();
         }
 
-        public override void Add(int Position, object data)
+        public override void Add(int Position, T data)
         {
             throw new NotImplementedException();
         }
@@ -32,7 +32,7 @@ namespace RoverList
             throw new NotImplementedException();
         }
 
-        public override Node ElementAt(int Position)
+        public override T ElementAt(int Position)
         {
             throw new NotImplementedException();
         }
