@@ -14,9 +14,10 @@ namespace RoverList
             public T Data { get; set; }
             public Node Next;
 
-            public Node (T data)
+            public Node (T data, Node next)
             {
                 this.Data = data;
+                this.Next = next;
             }
         }
 
